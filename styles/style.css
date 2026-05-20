@@ -131,6 +131,14 @@
   line-height: 21px;
   margin: 25px;
 }
+.card__text--add{
+  font-family: var(--main-text);
+  font-weight: var(--main-text-weight);
+  font-size: 18px;
+  line-height: 21px;
+  margin: 25px;
+  margin-top: 0;
+}
 
 .card__icon-button {
   display: flex;
