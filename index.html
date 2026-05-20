@@ -263,14 +263,14 @@
         </article>
 
         <button class="save_button"
-              type="button" 
-              onclick="window['dialog-id'].showModal()" 
-              aria-controls="dialog-id">
-          <svg class="diskette" width="21" height="21" viewBox="0 0 39 39">
-            <use href="#diskette" />
-          </svg>
-          <span class="save_button__text">Сохранить на память</span>
-        </button>
+        type="button" 
+        onclick="event.preventDefault(); window['dialog-id'].showModal();" 
+        aria-controls="dialog-id">
+  <svg class="diskette" width="21" height="21" viewBox="0 0 39 39">
+    <use href="#diskette" />
+  </svg>
+  <span class="save_button__text">Сохранить на память</span>
+</button>
  <svg xmlns="http://www.w3.org/2000/svg" 
     width="39" 
     height="39" 
@@ -300,10 +300,10 @@
           </svg>
           <span class="save_button__text dialog_text">Вставьте дискету, чтобы продолжить</span>
           <button class="save_button dialog_button"
-          type="button"
-          onclick="window['dialog-id'].close();">
-            <span class="save_button__text">OK</span>
-          </button>
+        type="button"
+        onclick="event.preventDefault(); window['dialog-id'].close();">
+  <span class="save_button__text">OK</span>
+</button>
         </dialog>
       </div>
     </main>
