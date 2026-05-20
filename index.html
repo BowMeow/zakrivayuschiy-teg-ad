@@ -378,20 +378,25 @@
   </main>
   <script src="./scripts/like.js"></script>
   <script>
-  const saveBtn = document.querySelector('.save_button[aria-controls="dialog-id"]');
-  if (saveBtn) {
-    saveBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      document.getElementById('dialog-id').showModal();
-    });
-  }
-  const okBtn = document.querySelector('.dialog_button');
-  if (okBtn) {
-    okBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      document.getElementById('dialog-id').close();
-    });
-  }
+  document.addEventListener('DOMContentLoaded', function() {
+    const saveBtn = document.querySelector('.save_button[aria-controls="dialog-id"]');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const dialog = document.getElementById('dialog-id');
+        if (dialog) dialog.showModal();
+      });
+    }
+
+    const okBtn = document.querySelector('.dialog_button');
+    if (okBtn) {
+      okBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const dialog = document.getElementById('dialog-id');
+        if (dialog) dialog.close();
+      });
+    }
+  });
 </script>
 </body>
 
